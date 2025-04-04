@@ -1,0 +1,231 @@
+body{
+    margin-top: 0;
+    padding: 0;
+    margin-left: 0;
+    overflow-x: hidden;
+    background-color: black;
+}
+video{
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+ol{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    left: 30%;
+    top: 10px;
+}
+li{
+    position: relative;
+    display: flex;
+    
+}
+a{
+    color: aliceblue;
+    text-decoration: none;
+    padding: 10px 10px;
+    z-index: 1;
+    
+}
+a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: antiquewhite;
+    transition: 0.3s linear;
+    box-shadow: 0 0 10px #fff;
+}
+header a::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 3px;
+    background-color: antiquewhite;
+    transition: 0.3s linear;
+    box-shadow: 0 0 10px #fff;
+}
+header a:hover::before{
+    width: 100%;
+}
+header a:hover::after{
+    width: 100%;
+}
+.activo{
+    color: rgb(173, 100, 241);
+}
+.activo::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: rgb(204, 70, 231);
+    transition: 0.3s linear;
+    box-shadow: 0 0 10px #fff;
+}
+.activo::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 3px;
+    background-color: rgb(204, 70, 231);
+    transition: 0.3s linear;
+    box-shadow: 0 0 10px #fff;
+    
+}
+.padre{
+    background-color: transparent;
+    position: relative;
+    left: 10px;
+    bottom: 50px;
+    animation: mover 4s linear infinite alternate;
+    
+}
+.padre2{
+    background-color: transparent;
+    position: relative;
+    left: 550px;
+    bottom: 150px;
+    animation: mover 4s linear infinite alternate;
+}
+@keyframes mover {
+    to{
+        transform: translateX(200px);
+    }
+}
+.hijo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid rgba(0, 0, 0, 0);
+    border-top: 5px solid rgb(0, 4, 255) ;
+    animation: movi 4s linear infinite alternate;
+    border-bottom: 5px solid rgb(4, 0, 255) ;
+   
+}
+.hijo2{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid rgba(0, 0, 0, 0);
+    border-top: 5px solid rgb(4, 0, 255) ;
+    border-bottom: 5px solid rgb(4, 0, 255) ;
+    animation: movi 4s linear infinite alternate;
+}
+@keyframes movi{
+    to{
+        transform: rotate(360deg);
+    }
+}
+.formu{
+    position: relative;
+    left: 32%;
+    width: 300px;
+    height: 400px;
+    background-image: url(assets1/wallpaperbetter\ \(4\).jpg);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgb(108, 108, 233);
+    bottom: 200px;
+    background-size: 110% 110%;
+}
+h1{
+    color: aliceblue;
+    font-size: 3em;
+    position: relative;
+    left: 85px;
+    top: 30px;
+    text-transform: capitalize;
+    animation: alto 0.9s linear infinite alternate;
+}
+@keyframes alto{
+    from{
+        transform: translateY(0);
+        color: transparent;
+    }
+    to{
+        transform: translateY(5px);
+    }
+}
+input{
+    padding: 15px 45px;
+    border-radius: 10px;
+    position: relative;
+    left: 18px;
+    margin-bottom: 20px;
+    top: 30px;
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    text-transform: capitalize;
+    font-style: italic;
+}
+::placeholder{
+    color: #fff;
+    font-style: italic;
+    text-transform: capitalize;
+    transition: 0.5s linear;
+}
+
+.botom{
+    background-color: rgba(0, 0, 255, 0.418);
+    position: relative;
+    left: 30px;
+    top: 20px;
+    color: #fff;
+    box-shadow: 0 0 10px blueviolet;
+}
+.botom2{
+    position: relative;
+    top: 60px;
+    left: 45px;
+    width: 200px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 255, 0.411);
+    box-shadow: 0 0 10px blueviolet;
+    color: #6413ce;
+    font-size: 2em;
+    transition: 0.3s linear;
+    border-color: transparent;
+    
+}
+.botom2:hover{
+    transform: scale(1.1);
+}
+.botom2:active{
+    transform: translateY(25px);
+}
+.padre3{
+    width: 100px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border: 2px solid rgb(255, 255, 255);
+    position: relative;
+    left: 890px;
+    bottom: 270px;
+    box-shadow: 0 0 10px #fff;
+}
+.oscuro{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    border-radius: 50%;
+    margin-right: 5px;
+}
