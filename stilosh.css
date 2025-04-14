@@ -256,21 +256,8 @@ span{
 .padresection:hover::before{
     width: 101%;
 }
-.padresection::after{
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 300px;
-    left: 0;
-    top: 1350px;
-    background-color: #26262b;
-    border-right: 1px solid rgb(255, 248, 248) ;
-    transition:all 0.5s linear;
-    z-index: -1;
-}
-.padresection:hover::after{
-    width: 101%;
-}
+
+
 @media (min-width:1030px){
     h1{
         font-size: 5em;
@@ -287,6 +274,9 @@ span{
 @media (max-width:428px){
     ol{
         left: 8%;
+    }
+    .copypadre1 p{
+        font-size:15px;
     }
     p{
         text-align:justify;
