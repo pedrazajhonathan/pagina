@@ -298,6 +298,12 @@ span{
     .padresection::before{
         height: 610px;
     }
+    .padresection::after{
+        top: 1200px;
+    }
+    footer{
+        top: 0px;
+    }
     .padreimg img{
         width: 120px;
         height: 150px;
@@ -367,4 +373,11 @@ span{
     z-index: 1;
     border-radius: 50%;
     margin-right: 5px;
+}
+footer{
+    position: relative;
+    top: 60px;
+    display: flex;
+    flex-direction: column-reverse;
+ 
 }
