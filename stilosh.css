@@ -6,8 +6,6 @@ body{
     overflow:scroll;
     overflow-x: hidden;
     box-sizing: border-box;
-    
-   
 }
 
 ol{
@@ -35,8 +33,7 @@ header::before{
     left: 0;
     top: 0;
     background-color: #000031;
-    transition: all 0.8s linear;
-    
+    transition: all 0.8s linear; 
 }
 header:hover::before{
     width: 101%;
@@ -46,8 +43,7 @@ header a{
     position: relative;/*importante colocar posicion relativa */
     text-decoration: none;
     padding: 10px 10px;
-    z-index: 1;
-    
+    z-index: 1; 
 }
 a::before{
     content: "";
@@ -100,8 +96,7 @@ header a:hover::after{
     height: 3px;
     background-color: rgb(204, 70, 231);
     transition: 0.3s linear;
-    box-shadow: 0 0 10px #fff;
-    
+    box-shadow: 0 0 10px #fff;  
 }
 .padre{
     background-color: transparent;
@@ -131,7 +126,6 @@ header a:hover::after{
     border-top: 5px solid rgb(0, 4, 255) ;
     animation: movi 4s linear infinite alternate;
     border-bottom: 5px solid rgb(4, 0, 255) ;
-   
 }
 .hijo2{
     width: 100px;
@@ -149,7 +143,7 @@ header a:hover::after{
 }
 h1{
     color: aliceblue;
-    font-size: 4em;
+    font-size: 7em;
     position: relative;
     left: 60px;
     animation: alto 1s ease infinite alternate;
@@ -181,7 +175,6 @@ p{
     top: 50px;
     text-transform: capitalize;
     left: 15px;
-
 }
 .padreimg{
     width: 1000px;
@@ -239,8 +232,6 @@ span{
     border-top: 3px solid #181616;
     position: relative;
     top: 50px;
-
-   
 }
 .padresection::before{
     content: '';
@@ -255,6 +246,9 @@ span{
 }
 .padresection:hover::before{
     width: 101%;
+}
+section a:visited{
+    color: #7bbfdf;  
 }
 
 
@@ -337,7 +331,6 @@ span{
         left: 7px;
     }
 }
-
 ::selection{
    
     color: #23585f;
