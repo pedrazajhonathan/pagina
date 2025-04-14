@@ -306,7 +306,8 @@ section a:visited{
     h1{
         position: relative;
         left: 12px;
-        font-size: 44px;
+        font-size: 36px;
+        text-align: center;
     }
     .padre div{
         border-color: #00000000;
