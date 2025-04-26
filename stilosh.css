@@ -38,41 +38,7 @@ header::before{
 header:hover::before{
     width: 101%;
 }
-header a{
-    color: aliceblue;
-    position: relative;/*importante colocar posicion relativa */
-    text-decoration: none;
-    padding: 10px 10px;
-    z-index: 1; 
-}
-a::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 3px;
-    background-color: antiquewhite;
-    transition: 0.3s linear;
-    box-shadow: 0 0 10px #fff;
-}
-header a::after{
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 0;
-    height: 3px;
-    background-color: antiquewhite;
-    transition: 0.3s linear;
-    box-shadow: 0 0 10px #fff;
-}
-header a:hover::before{
-    width: 100%;
-}
-header a:hover::after{
-    width: 100%;
-}
+
 .activo{
     color: rgb(173, 100, 241);
 }
@@ -98,54 +64,14 @@ header a:hover::after{
     transition: 0.3s linear;
     box-shadow: 0 0 10px #fff;  
 }
-.padre{
-    background-color: transparent;
-    position: relative;
-    left: 10px;
-    bottom: 50px;
-    animation: mover 4s linear infinite alternate;
-    
-}
-.padre2{
-    background-color: transparent;
-    position: relative;
-    left: 550px;
-    bottom: 150px;
-    animation: mover 4s linear infinite alternate;
-}
-@keyframes mover {
-    to{
-        transform: translateX(200px);
-    }
-}
-.hijo{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 5px solid rgba(0, 0, 0, 0);
-    border-top: 5px solid rgb(0, 4, 255) ;
-    animation: movi 4s linear infinite alternate;
-    border-bottom: 5px solid rgb(4, 0, 255) ;
-}
-.hijo2{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 5px solid rgba(0, 0, 0, 0);
-    border-top: 5px solid rgb(4, 0, 255) ;
-    border-bottom: 5px solid rgb(4, 0, 255) ;
-    animation: movi 4s linear infinite alternate;
-}
-@keyframes movi{
-    to{
-        transform: rotate(360deg);
-    }
-}
+
+
 h1{
     color: aliceblue;
     font-size: 7em;
     position: relative;
     left: 60px;
+    top: 10px;
     animation: alto 1s ease infinite alternate;
     text-transform: capitalize;
     bottom: 100px;
@@ -191,6 +117,7 @@ p{
     border-radius: 10px;
     left: 10px;
     backdrop-filter: blur(10px);
+    margin-bottom: 50px;
 }
 .padreimg img{
     width: 300px;
@@ -198,11 +125,11 @@ p{
     border-radius: 10px;
     opacity: 0.5;
     transition: 0.5s linear;
-    animation: lado 20s linear infinite alternate;
+    animation: lado 17s linear infinite alternate;
 }
 @keyframes lado{
     to{
-        transform: translateX(-2500px);
+        transform: translateX(-1400px);
     }
 }
 img:hover{
@@ -266,14 +193,12 @@ section a:visited{
     }
 }
 @media (max-width:428px){
-    ol{
-        left: 8%;
-    }
+ 
     .copypadre1 p{
         font-size:15px;
     }
     p{
-        text-align:justify;
+        text-align:start;
         font-size: 16px;
     }
     .padresection{
@@ -308,6 +233,7 @@ section a:visited{
         left: 12px;
         font-size: 33px;
         text-align: center;
+        top: 100px;
     }
     .padre div{
         border-color: #00000000;
@@ -365,3 +291,187 @@ footer{
     flex-direction: column-reverse;
  
 }
+.ele{
+    width: 200px;
+    height: 20px;
+    background: linear-gradient(90deg , #00eeff 0% ,  #ea00ff 100%);
+    border-radius: 3px;
+    z-index: 1;
+    position:absolute;
+    background-size: 200% 200%;
+    top: 100px;
+    left: 400px;
+    animation: colo 1s , colo3 2s 5s  infinite , movi 2s infinite;
+    transition: all .3s linear;
+}
+
+.ele2{
+    width: 200px;
+    height: 20px;
+    background: linear-gradient(90deg , #00e1ff 0% ,  #ea04ff 100%);
+    border-radius: 3px;
+    z-index: 1;
+    position: absolute;
+    background-size: 200% 200%;
+    top: 170px;
+    left: 400px;
+    animation: colo 1s,rotacion 3s 2s , colo3 2s 5s infinite , movi 2s infinite;
+    transition: all .3s linear;  
+}
+@keyframes rotacion{
+   
+    to{
+        transform: rotate(90deg);
+        width: 150px;
+        left: 425px;
+        
+    }
+}
+.ele3{
+    width: 200px;
+    height: 20px;
+    background: linear-gradient(90deg , #06eeff 0% ,  #c300ff 100%);
+    border-radius: 3px;
+    z-index: 1;
+    position: absolute;
+    top: 240px;
+    left: 400px;
+    animation: colo 1s, peque 3s 2s , colo3 2s 5s infinite , movi 2s infinite;
+    background-size: 200% 200%;
+    transition: all .3s linear;
+   }
+   @keyframes movi{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+   }
+   @keyframes colo3{
+    from{
+        display: none;
+        background: #ffffff00;
+    }
+    to{
+        display: none;
+        background: #ffffff00;
+    }
+   }
+   @keyframes peque{
+    to{
+        left: 410px;
+        width: 100px;
+    }
+   }
+   .fondo{
+    background-color: rgba(0, 0, 0, 0.979);
+    width: 100%;
+    height: 2000px;
+    position: absolute;
+    z-index: 1;
+    animation: color1 1s , block1 1s 5.4s infinite;
+   }
+   @keyframes block1{
+    from{
+        display: none;
+    }
+    to{
+        display: none;
+    }
+   }
+   @keyframes colo{
+    to{
+        background-color: #ffffff00;
+        transition: all 1s linear;
+    }
+   }
+ 
+   @media (max-width:430px){
+        .ele{
+            left: 20%;
+        }
+        .ele2{
+            left: 20%;
+        }
+        .ele3{
+            left: 20%;
+        }
+        @keyframes rotacion{
+            to{
+                transform: rotate(90deg);
+                left: 26%;
+                width: 160px;
+            }
+        }
+        @keyframes peque{
+            to{
+                left: 20%;
+                width: 100px;
+            }
+        }
+   }
+   .cubo{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(90deg , blue 0% , blueviolet 100%);
+    background-size: 200% 200%;
+    animation:  colo6 1s 5s infinite, movicolo 2s infinite , saltar 1s .2s infinite alternate;
+   }
+   .cubo2{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(90deg , blue 0% , blueviolet 100%);
+    background-size: 200% 200%;
+    animation:  colo6 1s 5s infinite, movicolo 2s infinite , saltar 1s .3s infinite alternate;
+   }
+   .cubo3{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(90deg , blue 0% , blueviolet 100%);
+    background-size: 200% 200%;
+    animation:  colo6 1s 5s infinite, movicolo 2s infinite , saltar 1s .4s infinite alternate;
+   }
+    @keyframes movicolo{
+        0%{
+            background-position: 0% 50%;
+        }
+        50%{
+            background-position: 100% 50%;
+        }
+        100%{
+            background-position: 0% 50%;
+        }
+    }
+    @keyframes saltar{
+        to{
+            transform: translateY(15px);
+        }
+    }
+    @keyframes colo6{
+        from{
+            display: none;
+        }
+        to{
+            display: none;
+        }
+    }
+   .padre9{
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    left: 42.5%;
+    top: 300px;
+    z-index: 1;
+   }
+   @media (max-width:430px){
+    .padre9{
+        left: 30%;
+    }
+   }
